@@ -1,0 +1,113 @@
+@import url("https://fonts.googleapis.com/css?family=Work+Sans:300");
+@import url("https://fonts.googleapis.com/css?family=Amatic+SC:700");
+
+$font-family-sans-serif: "Work Sans";
+
+// Set color variables
+$squash: rgb(203, 92, 13);
+$squash-muted: #d0b0a6;
+$dark-green: rgb(18, 49, 50);
+
+// Create grayscale
+$gray-dark: #292b2c;
+$gray: #3f3f3f;
+$gray-light: #7e7e7e;
+$gray-lighter: #ededed;
+$gray-lightest: #fafafa;
+
+$primary: $squash;
+$secondary: $dark-green;
+$breadcrumb-divider: quote(">");
+
+// $link-hover-color: $gray-lightest;
+$link-hover-decoration: none;
+$link-hover-color: $secondary;
+
+$navbar-light-color: rgba($primary, 1) !default;
+$navbar-light-hover-color: rgba($primary, 0.5) !default;
+$navbar-light-active-color: rgba($primary, 0.9) !default;
+$navbar-light-disabled-color: rgba($primary, 0.9) !default;
+$navbar-light-toggler-icon-bg: str-replace(
+  url("data:image/svg+xml;charset=utf8,%3Csvg viewBox='0 0 30 30' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath stroke='#{$primary}' stroke-width='2' stroke-linecap='round' stroke-miterlimit='10' d='M4 7h22M4 15h22M4 23h22'/%3E%3C/svg%3E"),
+  "#",
+  "%23"
+) !default;
+$navbar-light-toggler-border-color: rgba($primary, 0) !default;
+
+@import "../node_modules/bootstrap/scss/bootstrap";
+
+.container {
+  @extend .text-primary;
+}
+
+// NavBar
+.navbar {
+  padding: 1rem 1rem;
+}
+
+.navbar-nav {
+  padding-left: 1rem;
+  .nav-item .nav-link {
+    padding-right: 1rem;
+    padding-left: 1rem;
+  }
+}
+
+.navbar-light .navbar-brand {
+  color: $primary;
+  padding-top: 0rem;
+  padding-bottom: 0rem;
+}
+
+.navbar-light .navbar-brand:hover {
+  color: $squash-muted;
+}
+
+.navbar-light .navbar-toggler-icon {
+  background-image: url("data:image/svg+xml;charset=utf8,%3Csvg viewBox='0 0 30 30' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath stroke='#{$primary}' stroke-width='2' stroke-linecap='round' stroke-miterlimit='10' d='M4 7h22M4 15h22M4 23h22'/%3E%3C/svg%3E");
+}
+
+// Card
+.card {
+  background-color: rgb(240, 238, 238);
+  border: none;
+}
+
+.card:hover img {
+  opacity: 0.7;
+  transition: 0.4s ease;
+  color: $secondary;
+}
+
+.card-img-top {
+  @extend .rounded-0;
+}
+
+// Breadcrumb
+.breadcrumb {
+  padding: 0.75rem 0rem;
+}
+
+// Button
+.btn {
+  @extend .rounded-0;
+}
+
+.dropdown:hover > .dropdown-menu {
+  @extend .show;
+}
+
+.dropdown-menu {
+  background-color: rgb(237, 237, 238);
+  border: none;
+  @extend .rounded-0;
+}
+
+.dropdown-item {
+  color: $squash;
+  padding: 0.25rem 1rem;
+}
+
+.form-control::placeholder {
+  color: $squash;
+}

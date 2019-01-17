@@ -1,29 +1,125 @@
 <template>
   <div id="app">
-    <div id="nav">
-      <router-link to="/">Home</router-link> |
-      <router-link to="/about">About</router-link>
-    </div>
-    <router-view/>
+    <Navbar/>
+    <transition name="fade" mode="out-in">
+      <router-view :dog_breeds="dog_breeds" :key="$route.params.breed_slug"/>
+    </transition>
+    <FooterSection/>
   </div>
 </template>
 
-<style lang="scss">
-#app {
-  font-family: "Avenir", Helvetica, Arial, sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-  text-align: center;
-  color: #2c3e50;
-}
-#nav {
-  padding: 30px;
-  a {
-    font-weight: bold;
-    color: #2c3e50;
-    &.router-link-exact-active {
-      color: #42b983;
-    }
+<script>
+import Navbar from "./components/Navbar.vue";
+import FooterSection from "./components/Footer.vue";
+import FrenchBulldogs from "@/assets/french_bulldogs.jpg";
+import EnglishBulldogs from "@/assets/english_bulldogs.jpg";
+import PragueRatters from "@/assets/prague_ratters.jpg";
+
+export default {
+  name: "app",
+  components: {
+    Navbar,
+    FooterSection
+  },
+  data() {
+    return {
+      dog_breeds: [
+        {
+          name: "French Bulldogs",
+          slug: "french-bulldogs",
+          slogan: "The world needs more French Bulldogs",
+          description:
+            "Lorem, ipsum dolor sit amet consectetur adipisicing elit. Similique, rerum exercitationem iste maiores sed neque. Nisi quod facere deleniti, ratione, sit, tenetur laboriosam assumenda eligendi quasi ducimus quis officia? Ab!",
+          image: FrenchBulldogs
+        },
+        {
+          name: "English Bulldogs",
+          slug: "english-bulldogs",
+          description:
+            "Lorem, ipsum dolor sit amet consectetur adipisicing elit. Similique, rerum exercitationem iste maiores sed neque. Nisi quod facere deleniti, ratione, sit, tenetur laboriosam assumenda eligendi quasi ducimus quis officia? Ab!",
+          image: EnglishBulldogs
+        },
+        {
+          name: "Prague Ratters",
+          slug: "prague-ratters",
+          description:
+            "Lorem, ipsum dolor sit amet consectetur adipisicing elit. Similique, rerum exercitationem iste maiores sed neque. Nisi quod facere deleniti, ratione, sit, tenetur laboriosam assumenda eligendi quasi ducimus quis officia? Ab!",
+          image: PragueRatters
+        }
+      ]
+    };
   }
+};
+</script>
+
+<style lang="scss">
+@import "./styles/custom-bootstrap.scss";
+
+#app {
+  background-color: rgb(237, 237, 238);
+  font-size: 1rem;
+}
+
+@include media-breakpoint-up(xs) {
+  #app {
+    font-size: 0.8rem;
+  }
+  #home h1 {
+    font-size: 3rem;
+  }
+  .navbar-brand {
+    font-size: 1.5rem;
+  }
+}
+
+@include media-breakpoint-up(sm) {
+  #app {
+    font-size: 0.9rem;
+  }
+
+  .container-fluid {
+    padding-right: 15px;
+    padding-left: 15px;
+  }
+
+  #home h1 {
+    font-size: 6rem;
+  }
+}
+
+@include media-breakpoint-up(md) {
+  #app {
+    font-size: 0.9rem;
+  }
+  .container-fluid {
+    padding-right: 20px;
+    padding-left: 20px;
+  }
+
+  #home h1 {
+    font-size: 6rem;
+  }
+}
+
+@include media-breakpoint-up(lg) {
+  #app {
+    font-size: 1rem;
+  }
+  .container-fluid {
+    padding-right: 0px;
+    padding-left: 35px;
+  }
+  #home h1 {
+    font-size: 8rem;
+  }
+}
+
+.fade-enter-active,
+.fade-leave-active {
+  transition: opacity 0.4s;
+}
+.fade-enter,
+.fade-leave-to {
+  opacity: 0;
 }
 </style>
