@@ -1,6 +1,6 @@
 <template>
   <nav class="navbar navbar-expand-lg fixed-top navbar-light">
-    <div class="container-fluid">
+    <div class="container-fluid p-0">
       <router-link to="/" class="navbar-brand mr-5 font-weight-bold no-gutters">EUROBARK & CO.</router-link>
       <button
         class="navbar-toggler"

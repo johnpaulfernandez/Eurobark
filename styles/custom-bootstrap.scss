@@ -3,6 +3,7 @@
 
 $font-family-sans-serif: "Work Sans";
 
+
 // Set color variables
 $squash: rgb(203, 92, 13);
 $squash-muted: #d0b0a6;
@@ -34,9 +35,7 @@ $navbar-light-toggler-icon-bg: str-replace(
 ) !default;
 $navbar-light-toggler-border-color: rgba($primary, 0) !default;
 
-@import "../node_modules/bootstrap/scss/bootstrap";
-
-.container {
+.container-fluid, .container {
   @extend .text-primary;
 }
 
@@ -111,3 +110,5 @@ $navbar-light-toggler-border-color: rgba($primary, 0) !default;
 .form-control::placeholder {
   color: $squash;
 }
+
+

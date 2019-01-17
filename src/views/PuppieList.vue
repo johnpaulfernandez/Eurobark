@@ -15,7 +15,7 @@
 
     <!-- PUPPIES -->
     <header id="breeds-head-section">
-      <div class="breeds-inner container pt-0">
+      <div class="breeds-inner container-fluid pt-0">
         <div class="row">
           <div class="col-sm-4" v-for="puppy in puppies" :key="puppy.id">
             <div class="card mt-5">

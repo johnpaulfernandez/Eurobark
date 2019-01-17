@@ -1,6 +1,6 @@
 <template>
   <div id="contact" class="py-5">
-    <div class="container">
+    <div class="container-fluid">
       <div class="row">
         <div class="col-xl-4 offset-xl-4">
           <h4>Get In Touch</h4>

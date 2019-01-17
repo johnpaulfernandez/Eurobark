@@ -2,7 +2,7 @@
   <div class="details">
     <!-- DETAILS -->
     <header id="details-section">
-      <div class="row container justify-content-center" v-if="puppy">
+      <div class="row container-fluid justify-content-center" v-if="puppy">
         <div class="col-sm-6">
           <!-- BREADCRUMB -->
           <nav aria-label="breadcrumb">

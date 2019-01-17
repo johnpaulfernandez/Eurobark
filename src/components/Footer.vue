@@ -1,6 +1,6 @@
 <template>
   <footer id="main-footer" class="text-white mt-5">
-    <div class="container bg-secondary">
+    <div class="container-fluid bg-secondary">
       <div class="row">
         <div class="col-xl-6 offset-xl-3">
           <img src="@/assets/logo-top-doghouse.png" alt class="img-fluid mx-auto d-block mt-5 mb-3">

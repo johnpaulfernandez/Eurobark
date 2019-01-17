@@ -22,7 +22,7 @@
 
     <!-- BREEDS -->
     <header id="breeds-section">
-      <div class="breeds-inner container p-0">
+      <div class="breeds-inner container-fluid p-0">
         <div class="row">
           <div class="col-md-4" v-for="(breed, index) in dog_breeds" :key="index">
             <div class="card mt-5">
@@ -40,7 +40,7 @@
 
     <!-- ABOUT -->
     <header id="about">
-      <div class="container">
+      <div class="container-fluid">
         <div class="row bg-light align-items-center p-0 mt-5">
           <div class="col-lg-1"></div>
           <div class="col-lg-4 text-center float-sm-left text-primary">
@@ -54,12 +54,12 @@
           </div>
           <div class="col-lg-1"></div>
           <img src="@/assets/aboutphoto.jpg" class="thumb-post col-lg-3 img-fluid p-0">
-          <img src="@/assets/about2.jpg" class="thumb-post col-lg-3 img-fluid d-sm-none d-md-block p-0">
+          <img src="@/assets/about2.jpg" class="thumb-post col-lg-3 img-fluid d-none d-lg-block p-0">
         </div>
 
         <div class="row bg-secondary thumbpost align-items-center">
           <div class="col-lg-6 p-0">
-            <img src="@/assets/general.jpg" class="img-fluid d-sm-none d-md-block">
+            <img src="@/assets/general.jpg" class="img-fluid d-none d-lg-block">
           </div>
           <div class="col-lg-6 py-5">
             <div class="col-lg-8 offset-lg-2 align-self-center text-center">

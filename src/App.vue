@@ -53,7 +53,7 @@ export default {
 </script>
 
 <style lang="scss">
-@import "./styles/custom-bootstrap.scss";
+@import "./styles/app.scss";
 
 #app {
   background-color: rgb(237, 237, 238);
@@ -70,16 +70,15 @@ export default {
   .navbar-brand {
     font-size: 1.5rem;
   }
+
+  .container-fluid {
+    width: 94vw;
+  }
 }
 
 @include media-breakpoint-up(sm) {
   #app {
     font-size: 0.9rem;
-  }
-
-  .container-fluid {
-    padding-right: 15px;
-    padding-left: 15px;
   }
 
   #home h1 {
@@ -91,10 +90,6 @@ export default {
   #app {
     font-size: 0.9rem;
   }
-  .container-fluid {
-    padding-right: 20px;
-    padding-left: 20px;
-  }
 
   #home h1 {
     font-size: 6rem;
@@ -105,10 +100,7 @@ export default {
   #app {
     font-size: 1rem;
   }
-  .container-fluid {
-    padding-right: 0px;
-    padding-left: 35px;
-  }
+
   #home h1 {
     font-size: 8rem;
   }
